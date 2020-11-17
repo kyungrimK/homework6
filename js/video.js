@@ -55,11 +55,11 @@ document.querySelector("#volumeSlider").addEventListener("change", function () {
 document.querySelector("#old").addEventListener("click", function() {
 	console.log("Old School");
 	video.style.filter = "grayscale(100%)"
-	video.classList.add("grayscale");
+	video.classList.add("Grayscale");
 });
 
 document.querySelector("#original").addEventListener("click", function() {
 	console.log("Original");
 	video.style.filter = "grayscale(0%)"
-	video.classList.remove("grayscale");
+	video.classList.remove("Grayscale");
 });
