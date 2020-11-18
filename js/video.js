@@ -29,6 +29,9 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Skip Ahead");
+	if (BiquadFilterNode.currentTime > video.duration) {
+		video.currentTime = 0
+	}
 	video.currentTime += 5;
 });
 
@@ -54,12 +57,10 @@ document.querySelector("#volumeSlider").addEventListener("change", function () {
 
 document.querySelector("#old").addEventListener("click", function() {
 	console.log("Old School");
-	video.style.filter = "grayscale(100%)"
-	video.classList.add("Grayscale");
+	video.classList.add("oldTime");
 });
 
 document.querySelector("#original").addEventListener("click", function() {
 	console.log("Original");
-	video.style.filter = "grayscale(0%)"
-	video.classList.remove("Grayscale");
+	video.classList.remove("oldTime");
 });
